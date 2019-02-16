@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f98c6a</color>
+    <color name="colorPrimaryDark">#ff5722</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- danielstone -->
+    <color name="mal_text_primary">#de000000</color>
+    <color name="mal_text_secondary">#8a000000</color>
+
+    <color name="mal_text_primary_dark">#FFFFFF</color>
+    <color name="mal_text_secondary_dark">#b4ffffff</color>
+
+    <color name="mal_color_icon_light_theme">#616161</color>
+    <color name="mal_color_icon_dark_theme">#E0E0E0</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteOff">#beb8b8</color>
+    <color name="color_grey_700">#616161</color>
+    <color name="color_grey_800">#424242</color>
+</resources>

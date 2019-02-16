@@ -1,0 +1,104 @@
+{
+  "project_info": {
+    "project_number": "1030672984524",
+    "firebase_url": "https://tidetwist-570ec.firebaseio.com",
+    "project_id": "tidetwist-570ec",
+    "storage_bucket": "tidetwist-570ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030672984524:android:10a839870d4f13bb",
+        "android_client_info": {
+          "package_name": "tech.codegarage.tidetwist.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030672984524-l7nl181he1qvra7e7dusomghu6t2n4tr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2yR7j3xyaobFYpxkcy_LlsLUKvRsb7Xc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030672984524:android:4cec67b3fd0287fe",
+        "android_client_info": {
+          "package_name": "tech.codegarage.tidetwist.kitchen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030672984524-l7nl181he1qvra7e7dusomghu6t2n4tr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2yR7j3xyaobFYpxkcy_LlsLUKvRsb7Xc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030672984524:android:3c8c63bda7820132",
+        "android_client_info": {
+          "package_name": "tech.codegarage.tidetwist.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030672984524-l7nl181he1qvra7e7dusomghu6t2n4tr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2yR7j3xyaobFYpxkcy_LlsLUKvRsb7Xc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

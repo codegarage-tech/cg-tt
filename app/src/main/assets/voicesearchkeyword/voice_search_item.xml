@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<language name="voice_search_item">
+    <item itemCategory="Cuisine" itemId="1" itemName="Bangla" key1="Bangla" key2="Bengali" key3="Bangladesh"
+        key4="Bangladeshi" key5="Bangladeshi food" key6="Bengali food" key7="Bangla food" key8="Bangladeshi cuisine"
+        key9="Bengali cuisine" key10="Bangla cuisine" />
+    <item itemCategory="Cuisine" itemId="3" itemName="Indian" key1="Indian" key2="Hindi" key3="India"
+        key4="Hind" key5="Indian food" key6="India food" key7="Hindi food" key8="Indian cuisine"
+        key9="India cuisine" key10="Hind cuisine" />
+</language>

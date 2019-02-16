@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_grey_800"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/vector_account_empty" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_account"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@color/colorPrimaryDark" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/selector_rectangle_border_transparent_bg_transparent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:text="@string/view_about_profile"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_18" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        app:srcCompat="@drawable/vector_arrow_right_white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_register_kitchen"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/selector_rectangle_border_transparent_bg_transparent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:text="@string/view_register_kitchen"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_18" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        app:srcCompat="@drawable/vector_arrow_right_white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_register_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/selector_rectangle_border_transparent_bg_transparent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:text="@string/view_register_driver"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_18" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        app:srcCompat="@drawable/vector_arrow_right_white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/vector_notification_empty" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_notification"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@color/colorPrimaryDark" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_order_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/selector_rectangle_border_transparent_bg_transparent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:text="@string/view_order_notification"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_18" />
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_order_notification"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:scaleType="fitXY"
+                        app:si_tint_color="@android:color/white"
+                        app:srcCompat="@drawable/vector_notification_empty_white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_app_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/selector_rectangle_border_transparent_bg_transparent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:text="@string/view_app_notification"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_18" />
+
+                    <com.github.zagum.switchicon.SwitchIconView
+                        android:id="@+id/switch_app_notification"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:scaleType="fitXY"
+                        app:si_tint_color="@android:color/white"
+                        app:srcCompat="@drawable/vector_notification_empty_white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/vector_more_empty" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_more"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@color/colorPrimaryDark" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/selector_rectangle_border_transparent_bg_transparent"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:text="@string/view_language"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_18" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        app:srcCompat="@drawable/vector_arrow_right_white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/selector_rectangle_border_transparent_bg_transparent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:text="@string/view_about"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_18" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        app:srcCompat="@drawable/vector_arrow_right_white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_download_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@drawable/selector_rectangle_border_transparent_bg_transparent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:text="@string/view_download_app"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_18" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        app:srcCompat="@drawable/vector_arrow_right_white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tech.codegarage.fcm">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity
+            android:name="tech.codegarage.fcm.activity.FcmPayloadActivity"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
+        <activity
+            android:name="tech.codegarage.fcm.activity.CopyToClipboardActivity"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+        <service android:name="tech.codegarage.fcm.service.FcmMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

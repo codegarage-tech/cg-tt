@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_grey_800"
+            android:scrollbarStyle="insideOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_grey_800"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@color/color_grey_800">
+
+                    <ImageView
+                        android:id="@+id/iv_home_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAlphaShade"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_15">
+
+                        <TextView
+                            android:id="@+id/tv_greetings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_30"
+                            android:textStyle="bold"
+                            app:font="@{`Magnolia Script`}" />
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_15"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_30"
+                            android:textStyle="bold"
+                            app:font="@{`Magnolia Script`}" />
+
+                        <TextView
+                            android:id="@+id/tv_meal_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_20"
+                            android:textStyle="bold"
+                            app:font="@{`canaro_extra_bold`}" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_horizontal_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_40"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:gravity="left"
+                        android:text="@string/view_what_on_your_mind"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_25"
+                        android:textStyle="bold"
+                        app:font="@{`Magnolia Script`}" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_feature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    app:cardCornerRadius="0dp"
+                    card_view:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_150"
+                        android:background="@drawable/shape_rectangle_border_primary_bg_grey"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_10"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/view_search"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                app:font="@{`Magnolia Script`}" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/view_kitchen_by"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                app:font="@{`Magnolia Script`}" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/view_area"
+                                android:textColor="@color/white"
+                                android:textSize="40sp"
+                                app:font="@{`burnstown dam`}" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_90"
+                                android:layout_height="@dimen/dp_90"
+                                android:background="@drawable/vector_area_search_white"
+                                android:scaleType="fitXY" />
+
+                            <Button
+                                android:id="@+id/btn_explore_now_area"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/selector_round_border_white_bg_transparent"
+                                android:padding="@dimen/dp_10"
+                                android:text="@string/view_explore_now"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dp_16"
+                                app:font="@{`canaro_extra_bold`}" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--<android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    app:cardCornerRadius="0dp"
+                    card_view:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_150"
+                        android:background="@drawable/shape_rectangle_border_primary_bg_grey"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_10"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_80"
+                                android:layout_height="@dimen/dp_80"
+                                android:layout_marginBottom="@dimen/dp_10"
+                                android:background="@drawable/vector_voice_search_white"
+                                android:scaleType="fitXY" />
+
+                            <Button
+                                android:id="@+id/btn_explore_now_voice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/selector_round_border_white_bg_transparent"
+                                android:padding="@dimen/dp_10"
+                                android:text="Explore Now"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dp_16"
+                                app:font="@{`canaro_extra_bold`}" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Search"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                app:font="@{`Magnolia Script`}" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Kitchen By"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                app:font="@{`Magnolia Script`}" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Voice"
+                                android:textColor="@color/white"
+                                android:textSize="40sp"
+                                app:font="@{`burnstown dam`}" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>-->
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    app:cardCornerRadius="0dp"
+                    card_view:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_150"
+                        android:background="@drawable/shape_rectangle_border_primary_bg_grey"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_10"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_80"
+                                android:layout_height="@dimen/dp_80"
+                                android:layout_marginBottom="@dimen/dp_10"
+                                android:background="@drawable/vector_dish_white"
+                                android:scaleType="fitXY" />
+
+                            <Button
+                                android:id="@+id/btn_explore_now_cuisine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/selector_round_border_white_bg_transparent"
+                                android:padding="@dimen/dp_10"
+                                android:text="@string/view_explore_now"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dp_16"
+                                app:font="@{`canaro_extra_bold`}" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/view_search"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                app:font="@{`Magnolia Script`}" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/view_kitchen_by"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                app:font="@{`Magnolia Script`}" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/view_cuisine"
+                                android:textColor="@color/white"
+                                android:textSize="40sp"
+                                app:font="@{`burnstown dam`}" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

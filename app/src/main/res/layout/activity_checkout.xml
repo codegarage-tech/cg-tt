@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_base" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_grey_800"
+        android:orientation="vertical">
+
+        <tech.codegarage.tidetwist.view.LockableViewPager
+            android:id="@+id/vp_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fl_footer"
+            android:layout_below="@+id/stepper_indicator_checkout" />
+
+        <com.badoualy.stepperindicator.StepperIndicator
+            android:id="@+id/stepper_indicator_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/dp_10"
+            app:stpi_labelColor="@color/white"
+            app:stpi_labelMarginTop="@dimen/dp_10"
+            app:stpi_labelSize="@dimen/sp_16"
+            app:stpi_labels="@array/stepLabels" />
+
+        <FrameLayout
+            android:id="@+id/fl_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:padding="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/btn_skip"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/selector_arrow_circle_left" />
+
+            <Button
+                android:id="@+id/btn_finish"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_oval_border_white_bg_transparent"
+                android:text="@string/view_order_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/btn_next"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/selector_arrow_circle_right" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

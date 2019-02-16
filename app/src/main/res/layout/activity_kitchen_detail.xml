@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/htab_maincontent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/htab_collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimaryDark"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="?attr/colorPrimaryDark"
+            app:titleEnabled="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_grey_800"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax">
+
+                <RelativeLayout
+                    android:id="@+id/rl_kitchen"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        android:id="@+id/iv_kitchen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAlphaShade" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/rl_kitchen"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginTop="-100dp"
+                    android:layout_marginRight="@dimen/card_margin"
+                    android:layout_marginBottom="45dp"
+                    app:cardCornerRadius="0dp"
+                    card_view:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_rectangle_border_primary_bg_grey"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <tech.codegarage.tidetwist.view.CanaroTextView
+                            android:id="@+id/tv_kitchen_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/vector_streamline_white" />
+
+                            <TextView
+                                android:id="@+id/tv_kitchen_cuisine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="3"
+                                android:ellipsize="end"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/vector_time_empty_white" />
+
+                            <TextView
+                                android:id="@+id/tv_kitchen_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_10"
+                                android:background="@drawable/shape_round_border_white_bg_transparent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/dp_10"
+                                android:paddingTop="@dimen/dp_5"
+                                android:paddingRight="@dimen/dp_10"
+                                android:paddingBottom="@dimen/dp_5">
+
+                                <TextView
+                                    android:id="@+id/tv_kitchen_rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                    android:id="@+id/rb_kitchens_rating"
+                                    style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:numStars="5"
+                                    app:mrb_progressTint="@color/colorAccent"
+                                    app:mrb_secondaryProgressTint="@color/colorPrimaryDark" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_open"
+                                android:layout_width="@dimen/dp_90"
+                                android:layout_height="@dimen/dp_90"
+                                android:background="@drawable/vector_open_border_primary"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/iv_closed"
+                                android:layout_width="@dimen/dp_90"
+                                android:layout_height="@dimen/dp_90"
+                                android:background="@drawable/vector_closed_border_primary"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <include
+                layout="@layout/toolbar_kitchen_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="48dp"
+                app:layout_collapseMode="pin" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout_food_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/color_grey_800"
+                app:tabIndicatorColor="@color/colorPrimaryDark"
+                app:tabIndicatorHeight="3dp"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/colorPrimaryDark"
+                app:tabTextAppearance="@style/TabLayoutTextSize"
+                app:tabTextColor="@android:color/white" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_food_cateogry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_grey_800"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <declare-styleable name="TimeLineView">  
+        <attr name="zoneType"  >
+            <enum name="ZONE_TYPE_LINE" value="1" />
+            <enum name="ZONE_TYPE_ITEM" value="2" />
+        </attr>
+        <attr name="positionType"  >
+            <enum name="POSITION_TYPE_FIRST" value="1" />
+            <enum name="POSITION_TYPE_MIDDLE" value="2" />
+            <enum name="POSITION_TYPE_LAST" value="3" />
+        </attr>
+        <attr name="radioSmall" format="dimension" />
+        <attr name="radioBig" format="dimension" />
+        <attr name="radioLeft" format="dimension" />
+    </declare-styleable>  
+
+</resources>

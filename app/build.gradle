@@ -1,0 +1,264 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion appCompileSdkVersion
+    buildToolsVersion appBuildToolsVersion
+
+    signingConfigs {
+        releaseConfig {
+            try {
+                keyAlias 'keydata.keystore'
+                keyPassword KEY_PASSWORD
+                storeFile file('../misc/keydata.keystore')
+                storePassword STORE_PASSWORD
+            } catch (ex) {
+                throw new InvalidUserDataException("You should define KEY_PASSWORD and STORE_PASSWORD in gradle.properties.")
+            }
+        }
+    }
+
+    defaultConfig {
+        applicationId "tech.codegarage.tidetwist"
+        minSdkVersion appMinSdkVersion
+        targetSdkVersion appTargetSdkVersion
+//        versionCode appUserVersionCode
+//        versionName appUserVersionName
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        // define your base Applications name here
+        resValue 'string', 'app_name', 'TideTwist'
+    }
+
+    buildTypes {
+        debug {
+            shrinkResources false
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            debuggable false
+
+            //For single file
+//            proguardFile 'aboutbox.pro'
+            //For all files
+//            proguardFiles fileTree(dir: "rules", include: ["*.pro"]).asList().toArray()
+
+            //Default proguard call
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+    //Flavor definition
+    flavorDimensions "appType", "marketType"
+    productFlavors {
+        user {
+            dimension "appType"
+
+            applicationIdSuffix ".user"
+            versionCode appUserVersionCode
+            versionName appUserVersionName
+        }
+        kitchen {
+            dimension "appType"
+
+            applicationIdSuffix ".kitchen"
+            versionCode appKitchenVersionCode
+            versionName appKitchenVersionName
+        }
+        driver {
+            dimension "appType"
+
+            applicationIdSuffix ".driver"
+            versionCode appDriverVersionCode
+            versionName appDriverVersionName
+        }
+
+        bd {
+            dimension "marketType"
+
+//            applicationIdSuffix ".bd"
+        }
+        us {
+            dimension "marketType"
+
+//            applicationIdSuffix ".us"
+        }
+        uk {
+            dimension "marketType"
+
+//            applicationIdSuffix ".uk"
+        }
+    }
+
+    //Remove unwanted vairant
+    android.variantFilter { variant ->
+        if (variant.getFlavors().get(0).name.equals('user')
+                && (variant.getFlavors().get(1).name.equals('us')
+                || variant.getFlavors().get(1).name.equals('uk'))) {
+            variant.setIgnore(true)
+        }
+        if (variant.getFlavors().get(0).name.equals('kitchen')
+                && (variant.getFlavors().get(1).name.equals('us')
+                || variant.getFlavors().get(1).name.equals('uk'))) {
+            variant.setIgnore(true)
+        }
+        if (variant.getFlavors().get(0).name.equals('driver')
+                && (variant.getFlavors().get(1).name.equals('us')
+                || variant.getFlavors().get(1).name.equals('uk'))) {
+            variant.setIgnore(true)
+        }
+    }
+
+    //Format output
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            println variant
+
+            //Rename the output apk file
+            def appName = variant.mergedFlavor.resValues.get('app_name').getValue()
+            def underScore = "_"
+            def hyphen = "-"
+            def flavor = variant.baseName.split("-")[0]
+            def version = variant.versionName
+            def buildType = variant.buildType.name
+            def releaseApkName = appName + underScore + convertToCamelCase(flavor) + underScore + version + underScore + convertToCamelCase(buildType) + ".apk"
+            outputFileName = releaseApkName
+
+            // set new resVale
+            def finalAppName = ""
+            if (flavor.equals('user')) {
+                finalAppName = appName
+            } else if (flavor.equals('kitchen')) {
+                finalAppName = appName + hyphen + convertToCamelCase(flavor)
+            } else if (flavor.equals('driver')) {
+                finalAppName = appName + hyphen + convertToCamelCase(flavor)
+            }
+            variant.resValue 'string', 'app_name', finalAppName
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    //This is used for custom typeface
+    dataBinding {
+        enabled = true
+    }
+}
+
+def static String convertToCamelCase(String str) {
+    if (str == null) {
+        return null
+    }
+
+    boolean space = true
+    StringBuilder builder = new StringBuilder(str)
+    final int len = builder.length()
+
+    for (int i = 0; i < len; ++i) {
+        char c = builder.charAt(i)
+        if (space) {
+            if (!Character.isWhitespace(c)) {
+                // Convert to title case and switch out of whitespace mode.
+                builder.setCharAt(i, Character.toTitleCase(c))
+                space = false
+            }
+        } else if (Character.isWhitespace(c)) {
+            space = true
+        } else {
+            builder.setCharAt(i, Character.toLowerCase(c))
+        }
+    }
+
+    return builder.toString()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.reversecoder.library:rc-library:$libraryVersion"
+
+    //Android support libraries
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:support-media-compat:$supportLibraryVersion"
+    implementation "com.android.support:support-v4:$supportLibraryVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    implementation "com.android.support:multidex:$multiDexVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+
+    //SSL payment gateway
+    implementation(name: 'ssl-payment-sdk-v4', ext: 'aar')
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation "com.android.volley:volley:$volleyVersion"
+
+    //Image loading
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    //Retrofit for server communication
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
+    //Parceler
+    implementation 'org.parceler:parceler-api:1.1.11'
+    annotationProcessor 'org.parceler:parceler:1.1.11'
+
+    //Event handler
+    implementation "org.greenrobot:eventbus:$eventBusVersion"
+
+    //Barcode
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+
+    //Location library
+    implementation "com.google.android.gms:play-services-location:$googlePlayServiceLocationVersion"
+
+    //Custom fonts
+    implementation 'com.github.EngrAhsanAli:AACustomFont:1.1'
+
+    //Library projects
+    implementation project(":statusbarutil")
+    implementation project(":recolor")
+    implementation project(":countrypicker")
+    implementation project(":easyrecyclerview")
+    implementation project(":dropdownmenuplus")
+    implementation project(":shopping")
+    implementation project(":cookiebar2")
+    implementation project(":attributionpresenter")
+    implementation project(":aboutbox")
+    implementation project(":parallaxrecyclerview")
+    implementation project(":glazyviewpager")
+    implementation project(":optroundcardview")
+    implementation project(":androidimageslider")
+    implementation project(":stepperindicator")
+    implementation project(":smilerating")
+    implementation project(":ribblemenu")
+    implementation project(":multiwaveheader")
+    implementation project(":switchicon")
+    implementation project(":matisse")
+    implementation project(":imagezipper")
+    implementation project(":fcm")
+    implementation project(":materialratingbar")
+    implementation project(":niftydialogeffects")
+    implementation project(":timelineview")
+    implementation project(":expansionpanel")
+    implementation project(":flowlayout")
+    implementation project(":waveswiperefreshlayout")
+    implementation project(":speech")
+    implementation project(":materialdatetimepicker")
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tech.codegarage.tidetwist">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature android:name="android.hardware.location.network" />
+
+    <application
+        android:name="tech.codegarage.tidetwist.application.TideTwistApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Activities -->
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.HomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.AppUserRegistrationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.KitchenListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.KitchenDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.CuisineListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.FoodItemDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.CheckoutActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.AddFoodReviewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.KitchenRegistrationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.KitchenLoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.AboutAppUserActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.DownloadAppActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.DriverLoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.DriverRegistrationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="tech.codegarage.tidetwist.activity.VoiceSearchActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.sslcommerz.library.payment.Activity.BankListActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Services -->
+        <service
+            android:name="tech.codegarage.tidetwist.service.DriverJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+    </application>
+
+</manifest>

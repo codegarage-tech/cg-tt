@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_20">
+
+    <EditText
+        android:id="@+id/edt_promo_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="@string/dialog_promo_code"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhiteOff"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@color/colorWhite" />
+
+</LinearLayout>

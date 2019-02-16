@@ -1,0 +1,264 @@
+<resources>
+
+    <!-- About App -->
+    <!--<string name="app_name">TideTwist</string>-->
+    <string name="app_name_capital">TIDETWIST</string>
+    <string name="app_version_text">Version:</string>
+    <string name="app_author">CodeGarage Team</string>
+    <string name="app_author_email">codegarage.tech.us@gmail.com</string>
+    <string name="app_contact_subject">"Contact Support"</string>
+    <string name="app_contact_body">""</string>
+    <string name="app_publisher_id">8721116055633300205</string>
+    <string name="app_publisher_facebook_id">CodeGarage-563906867283858</string>
+    <string name="app_publisher_twitter_id">codegarage_tech</string>
+    <string name="app_publisher_profile_website">http://www.codegarage.tech/</string>
+    <string name="app_publisher_company_html_path">http://www.codegarage.tech/</string>
+    <string name="app_publisher_privacy_html_path">http://codegarage.tech/privacy_and_policy.html</string>
+    <string name="app_publisher_acknowledgment_html_path">http://codegarage.tech/terms_and_conditions.html</string>
+    <string name="app_play_store_url">https://play.google.com/store/apps/details?id=%1$s</string>
+
+    <!-- Activity title -->
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_app_user_registration">User Registration</string>
+    <string name="title_activity_kitchen_registration">Kitchen Registration</string>
+    <string name="title_activity_driver_registration">Driver Registration</string>
+    <string name="title_activity_kitchen_list">Kitchens</string>
+    <string name="title_activity_kitchen_Detail">Kitchen Detail</string>
+    <string name="title_activity_cuisine_list">Cuisine</string>
+    <string name="title_activity_voice_search">Voice Search</string>
+    <string name="title_activity_food_item_detail">Food Detail</string>
+    <string name="title_activity_order_detail">Order Detail</string>
+    <string name="title_activity_checkout">Checkout</string>
+    <string name="title_activity_review">Review</string>
+    <string name="title_activity_kitchen_login">Kitchen Login</string>
+    <string name="title_activity_driver_login">Driver Login</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_download_app">Download App</string>
+
+    <!--Menu title-->
+    <string name="title_menu_home">Home</string>
+    <string name="title_menu_login">Login</string>
+    <string name="title_menu_log_in">Log in</string>
+    <string name="title_menu_order_list">Order List</string>
+    <string name="title_menu_favourite">Favourite</string>
+    <string name="title_menu_logout">Log out</string>
+
+    <!-- Navigation drawer menu -->
+    <string name="ribble_menu_item_home">HOME</string>
+    <string name="ribble_menu_item_order">ORDER</string>
+    <string name="ribble_menu_item_favorite">FAVORITE</string>
+    <string name="ribble_menu_item_notification">NOTIFICATION</string>
+    <string name="ribble_menu_item_settings">Settings</string>
+
+    <!-- View text -->
+    <string name="view_loading">Loading...</string>
+    <string name="view_fast_delivery">Fast Delivery</string>
+    <string name="view_fast_delivery_msg">Get your food delivery instantly</string>
+    <string name="view_area">Area</string>
+    <string name="view_cuisine">Cuisine</string>
+    <string name="view_popular">Popular</string>
+    <string name="view_offer">Offer</string>
+    <string name="view_cuisine_subtitle">Kitchens of different cuisine</string>
+    <string name="view_popular_subtitle">Popular kitchens around your location</string>
+    <string name="view_offer_subtitle">Kitchens which provide offers around your location</string>
+    <string name="view_dhaka_division">Dhaka Division</string>
+    <string name="view_meal_breakfast">Breakfast</string>
+    <string name="view_meal_morning_snacks">Morning snacks</string>
+    <string name="view_meal_lunch">Lunch</string>
+    <string name="view_meal_evening_snacks">Evening snacks</string>
+    <string name="view_meal_dinner">Dinner</string>
+    <string name="view_sleeping">Sleeping</string>
+    <string name="view_time_morning">Morning</string>
+    <string name="view_time_noon">Noon</string>
+    <string name="view_time_afternoon">Afternoon</string>
+    <string name="view_time_evening">Evening</string>
+    <string name="view_time_night">Night</string>
+    <string name="view_text_good">Good</string>
+    <string name="view_text_its_time_for">It\'s time for</string>
+    <string name="view_text_mr">Mr.</string>
+    <string name="view_add_to_cart">Add to cart</string>
+    <string name="view_please_select_area_and_cuisine_from_dropdown">Please select area and cuisine from dropdown</string>
+    <string name="view_please_select_cuisine_from_dropdown">Please select cuisine from dropdown</string>
+    <string name="view_please_select_area_from_dropdown">Please select area from dropdown</string>
+    <string name="view_please_connect_internet_and_retry">Please connect to internet and retry</string>
+    <string name="view_skip">Skip</string>
+    <string name="view_next">Next</string>
+    <string name="view_order_now">Order Now</string>
+    <string name="view_tk">Tk</string>
+    <string name="view_current_address">Current Address</string>
+    <string name="view_preferred_address">Preferred Address</string>
+    <string name="view_delivery_date">Delivery Date</string>
+    <string name="view_pick_delivery_date">Pick Delivery Date</string>
+    <string name="view_delivery_time">Delivery Time</string>
+    <string name="view_pick_delivery_time">Pick Delivery Time</string>
+    <string name="view_address">Address</string>
+    <string name="view_phone">Phone</string>
+    <string name="view_zone">Zone</string>
+    <string name="view_division">Division</string>
+    <string name="view_voice_search_category">Voice Search Category</string>
+    <string name="view_name">Name</string>
+    <string name="view_kitchen_name">Kitchen name</string>
+    <string name="view_first_name">First name</string>
+    <string name="view_last_name">Last name</string>
+    <string name="view_email">Email</string>
+    <string name="view_driver_email">Driver email</string>
+    <string name="view_kitchen_email">Kitchen email</string>
+    <string name="view_min_order_value">Min order value</string>
+    <string name="view_preparation_time">Preparation time</string>
+    <string name="view_opening_schedule">Opening schedule</string>
+    <string name="view_password">Password</string>
+    <string name="view_contact_person_name">Contact person name</string>
+    <string name="view_contact_person_email">Contact person email</string>
+    <string name="view_contact_person_phone">Contact person phone</string>
+    <string name="view_place_your_feedback_here">Place your feedback here!</string>
+    <string name="view_apply_promo_code">Apply Promo Code</string>
+    <string name="view_instant_payment">Instant Payment</string>
+    <string name="view_payment_on_delivery">Payment On Delivery</string>
+    <string name="view_after_getting_delivery_i_will_give_cash_to_the_delivery_man">After getting delivery I will give cash to the delivery man.</string>
+    <string name="view_i_want_pay_now_by_my_desired_payment_method">I want to pay now by my desired payment method.</string>
+    <string name="view_item_cost">Items Cost:</string>
+    <string name="view_subtotal">Subtotal</string>
+    <string name="view_zero_tk">0 Tk</string>
+    <string name="view_sixty_tk">60.00 Tk</string>
+    <string name="view_shipping_cost">Shipping cost</string>
+    <string name="view_promotional_discount">Promotional discount</string>
+    <string name="view_minus">-</string>
+    <string name="view_equal">=</string>
+    <string name="view_percentage">%</string>
+    <string name="view_x">x</string>
+    <string name="view_first_bracket_left">(</string>
+    <string name="view_first_bracket_right">)</string>
+    <string name="view_sixty">60.00</string>
+    <string name="view_total">Total</string>
+    <string name="view_add_review">Add Review</string>
+    <string name="view_review_count">Review(%d)</string>
+    <string name="view_update">Update</string>
+    <string name="view_maximum_review_start_number">5.00</string>
+    <string name="view_item_details">Item Details</string>
+    <string name="view_order_status">Order Status</string>
+    <string name="view_order_info">Order Info</string>
+    <string name="view_order_actions">Order Actions</string>
+    <string name="view_order_again">Order Again</string>
+    <string name="view_cooking_started">Cooking Started</string>
+    <string name="view_cooking_finished">Food Delivered</string>
+    <string name="view_food_picked">Food Picked</string>
+    <string name="view_food_delivered">Food Delivered</string>
+    <string name="view_share_with">Share with</string>
+    <string name="view_register_user">Register User</string>
+    <string name="view_account">Account</string>
+    <string name="view_about_profile">About profile</string>
+    <string name="view_kitchen_login">Kitchen Login</string>
+    <string name="view_driver_login">Driver Login</string>
+    <string name="view_register_kitchen">Register kitchen</string>
+    <string name="view_register_driver">Register driver</string>
+    <string name="view_request_registration">Request Registration</string>
+    <string name="view_notification">Notification</string>
+    <string name="view_app_notification">App notification</string>
+    <string name="view_order_notification">Order notification</string>
+    <string name="view_more">More</string>
+    <string name="view_language">Language</string>
+    <string name="view_about">About</string>
+    <string name="view_download_app">Download app</string>
+    <string name="view_scan_qr_code_to_download_the_app">Scan QR code to download the app!</string>
+    <string name="view_or">or</string>
+    <string name="view_dont_have_any_account_request_for_registration_here">Don\'t have any account? Request for registration here!</string>
+    <string name="view_user">User</string>
+    <string name="view_kitchen">Kitchen</string>
+    <string name="view_driver">Driver</string>
+    <string name="view_base_package_name">tech.codegarage.tidetwist</string>
+    <string name="view_ingredients">Ingredients</string>
+    <string name="view_order_id">Order ID:</string>
+    <string name="view_repeat_please">Repeat Please</string>
+    <string name="view_yes">Yes</string>
+    <string name="view_no">No</string>
+    <string name="view_speech_not_available">Speech recognition is not available on this device. Do you want to install Google app to have speech recognition?</string>
+    <string name="view_enable_google_voice_typing">Please enable Google Voice Typing to use speech recognition!</string>
+    <string name="view_tap_mic_icon_from_below_and_say_whatever_you_want_to_search">Tap mic icon from below and say whatever you want to search. For example, if you select \"Cuisine\", then search keywords will be like thus \"Bangla\", \"Indian\"\.\.\.</string>
+    <string name="view_searching_kitchen_using">Searching kitchen using</string>
+    <string name="view_keyword">Keyword</string>
+    <string name="view_what_on_your_mind">What\'s on your mind?</string>
+    <string name="view_search">Search</string>
+    <string name="view_kitchen_by">Kitchen By</string>
+    <string name="view_explore_now">Explore Now</string>
+    <string name="view_delivery_info">Delivery Info</string>
+    <string name="view_driver_info">Driver Info</string>
+    <string name="view_kitchen_info">Kitchen Info</string>
+
+    <!-- Toast message -->
+    <string name="toast_could_not_retrieve_info">Could not retrieve info</string>
+    <string name="toast_network_error">You have no internet connection!\nPlease connect to internet.</string>
+    <string name="toast_no_info_found">No info found</string>
+    <string name="toast_loaded_offline_data">Loaded offline data</string>
+    <string name="toast_please_input_your_mobile_no">Please input mobile number</string>
+    <string name="toast_please_input_valid_mobile_no">Please input valid mobile number</string>
+    <string name="toast_please_input_your_first_name">Please input your first name</string>
+    <string name="toast_please_input_your_last_name">Please input your last name</string>
+    <string name="toast_please_input_your_name">Please input your name</string>
+    <string name="toast_please_select_your_division">Please select your division</string>
+    <string name="toast_please_select_your_zone">Please select your zone</string>
+    <string name="toast_please_input_your_email">Please input your email</string>
+    <string name="toast_please_input_valid_email">Please input valid email</string>
+    <string name="toast_please_input_your_password">Please input your password</string>
+    <string name="toast_please_add_to_cart_first">Please add to cart first</string>
+    <string name="toast_please_input_your_address">Please input your address</string>
+    <string name="toast_please_input_your_delivery_date">Please input your delivery date</string>
+    <string name="toast_please_input_your_delivery_time">Please input your delivery time</string>
+    <string name="toast_please_give_some_feedback">Please give some feedback</string>
+    <string name="toast_please_select_rating">Please input your rating</string>
+    <string name="toast_order_is_placed_successfully">Order is placed successfully</string>
+    <string name="toast_profile_is_updated_successfully">Profile is updated successfully</string>
+    <string name="toast_please_input_promo_code">Please input promo code</string>
+    <string name="toast_you_need_to_order_atleast_100_tk">You need to order atleast 100 tk</string>
+    <string name="toast_your_transaction_is_in_risk">Your transaction is in risk</string>
+    <string name="toast_your_transaction_fails">Your transaction fails</string>
+    <string name="toast_ssl_user_input_error">User input error</string>
+    <string name="toast_ssl_internet_connection_error">Internet connection error</string>
+    <string name="toast_ssl_data_parsing_error">Data parsing error</string>
+    <string name="toast_ssl_cancel_transaction_error">Transaction error</string>
+    <string name="toast_ssl_server_error">Server error</string>
+    <string name="toast_ssl_network_error">Network error</string>
+    <string name="toast_the_task_is_completed">The task is completed</string>
+    <string name="toast_the_user_is_not_verified">The user is not verified</string>
+    <string name="toast_please_select_any_voice_search_category">Please select any voice search category</string>
+    <string name="toast_cooking_is_not_finished_yet">Cooking is not finished yet</string>
+    <string name="toast_cooking_is_not_started_yet">Cooking is not started yet</string>
+    <string name="toast_food_is_not_picked_yet">Food is not picked yet</string>
+    <string name="toast_your_sim_card_is_absent">Your sim card is absent</string>
+    <string name="toast_number_is_not_valid">Number is not valid</string>
+    <string name="toast_kitchen_is_closed_now">Kitchen is closed now</string>
+    <string name="toast_ignored_fast_click">Ignored fast click!</string>
+
+    <!-- Dialog message -->
+    <string name="dialog_warning">Warning</string>
+    <string name="dialog_message">Message</string>
+    <string name="dialog_your_selected_items_will_be_removed_from_cart">Your selected items will be removed from cart</string>
+    <string name="dialog_the_item_will_be_removed_from_cart">The item will be removed from cart</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_retry">RETRY</string>
+    <string name="dialog_cancel">CANCEL</string>
+    <string name="dialog_enter_promo_code">Enter Promo Code</string>
+    <string name="dialog_promo_code">Promo Code</string>
+    <string name="dialog_do_you_wanna_close_the_app">Do you wanna close the app?</string>
+    <string name="dialog_your_payment_is_successful_but_could_not_process_the_order_due_to_no_network">Your payment is successful, but could not process the order due to no network</string>
+
+    <!-- Stepper indicator -->
+    <string-array name="stepLabels">
+        <item>Foods</item>
+        <item>Delivery Info</item>
+        <item>Payment</item>
+    </string-array>
+
+    <array name="home_banner">
+        <item>@drawable/home_banner_1</item>
+        <item>@drawable/home_banner_2</item>
+        <item>@drawable/home_banner_3</item>
+        <item>@drawable/home_banner_4</item>
+        <item>@drawable/home_banner_5</item>
+        <item>@drawable/home_banner_6</item>
+        <item>@drawable/home_banner_7</item>
+        <item>@drawable/home_banner_8</item>
+        <item>@drawable/home_banner_9</item>
+        <item>@drawable/home_banner_10</item>
+    </array>
+
+</resources>

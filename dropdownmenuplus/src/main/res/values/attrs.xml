@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DropDownMenu">
+        <attr name="layout_content" format="reference" />
+        <attr name="tab_background" format="reference" />
+        <attr name="show_tab" format="boolean" />
+    </declare-styleable>
+
+</resources>
